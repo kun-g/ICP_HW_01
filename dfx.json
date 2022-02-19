@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "hello_icp": {
+      "main": "src/hello_icp/main.mo",
+      "type": "motoko"
+    },
+    "hello_icp_assets": {
+      "dependencies": [
+        "hello_icp"
+      ],
+      "frontend": {
+        "entrypoint": "src/hello_icp_assets/src/index.html"
+      },
+      "source": [
+        "src/hello_icp_assets/assets",
+        "dist/hello_icp_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.8.4",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
